@@ -1,0 +1,94 @@
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative clowns on the sides */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+
+body::before {
+  left: 20px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0c/Clown_icon.png');
+}
+
+body::after {
+  right: 20px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0c/Clown_icon.png');
+}
+
+/* Heading */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #222;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  letter-spacing: 1px;
+}
+
+/* Input styling */
+input {
+  padding: 14px 18px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: 0.3s ease;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+input:focus {
+  border-color: #9b59b6;
+  box-shadow: 0 0 12px rgba(155, 89, 182, 0.6);
+  transform: scale(1.02);
+}
+
+/* Button styling */
+button {
+  margin-top: 20px;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3498db, #9b59b6);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.07);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Response text */
+#response {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #e74c3c;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+}

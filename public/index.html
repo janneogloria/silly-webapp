@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Silly Greeting App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to the Silly Greeting App!</h1>
+  <input id="nameInput" type="text" placeholder="Enter your name">
+  <button onclick="submitName()">Submit</button>
+  <h2 id="response"></h2>
+
+  <script>
+    async function submitName() {
+      const name = document.getElementById("nameInput").value;
+      if (!name) return;
+      // Mock API call for now
+      document.getElementById("response").innerText = `Hello, silly ${name}!`;
+    }
+  </script>
+</body>
+</html>
